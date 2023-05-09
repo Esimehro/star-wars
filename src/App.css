@@ -8,7 +8,8 @@ body {
   font-family: "Open Sans", sans-serif;
   min-height: 100vh;
   background-color: black;
-  width: 100vw;
+  color: white;
+  /* width: 100vw; */
 }
 
 .spinner{
@@ -22,9 +23,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   max-width: 1089px;
-  /* max-width: 1200px; */
   margin: 0 auto;
-  /* place-items: center; */
 }
 
 
@@ -57,7 +56,6 @@ body {
 
 .movie-card-container:nth-child(1){
   background-image:url("images/movie-1.png");
-  /* width: 300px; */
 }
 
 .movie-card-container:nth-child(2){
@@ -90,7 +88,6 @@ body {
 
 .title{
   margin-bottom: 2px;
-  /* margin-top: 7px; */
 }
 
 .title a{

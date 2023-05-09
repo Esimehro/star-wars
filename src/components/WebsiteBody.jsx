@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { HeaderLogo } from './HeaderLogo';
 import { Spinner } from './Spinner';
-import '../App.css'
+import '../App.css';
+// import { MoreInfo } from './MoreInfo';
+import {Link} from "react-router-dom"
+
 
 // https://swapi.dev/api/films
 
@@ -39,7 +42,7 @@ export const WebsiteBody = () => {
     {loading && <Spinner/>}
     <div className='container'>
         {error && <div>{`There is a problem fetching the data - ${error}`}</div>}
-            {data && data.map((results) => {
+            {data && data.map((results, index) => {
                 return(<div className='movie-card-container' key ={results.episode_id}>
                     <div className='movie-card'>
                         <h2 className='title'>
@@ -52,7 +55,7 @@ export const WebsiteBody = () => {
                         <p className='opening-crawl'>{results.opening_crawl}</p>
                     </div>
                     <div className='info-link'>
-                            <a href='#link'>More Info</a>
+                          <Link to={'/more/' + (index+1)}>More Info</Link>
                         </div>
                     </div>
                 )
